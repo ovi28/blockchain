@@ -1,0 +1,4 @@
+FROM java:8
+EXPOSE 8083
+ADD blockchain4.jar blockchain.jar
+ENTRYPOINT ["java","-jar", "blockchain.jar"]

@@ -17,9 +17,9 @@ import static blockchain.Message.MESSAGE_TYPE.*;
 
 public class Client {
 
-    private String NAME = "Client 1";
-    private String ADDRESS = "localhost";
-    private int PORT = 3001;
+    private String NAME = "Client 4";
+    private List<String> addresses =  new ArrayList<>();
+    private int PORT = 3004;
     private List<Integer> ports = new ArrayList<>();
     private List<Block> blockchain = new ArrayList<>();
     private static final Block root = new Block(0, "ROOT_HASH", "ROOT");
@@ -31,10 +31,15 @@ public class Client {
 
     public Client() {
         blockchain.add(root);
-        //ports.add(3001);
+         ports.add(3001);
         ports.add(3002);
         ports.add(3003);
-        ports.add(3004);
+        //ports.add(3004);
+        addresses.add("b1");
+        addresses.add("b2");
+        addresses.add("b3");
+        //addresses.add("b4");
+
         startHost();
     }
 
@@ -44,7 +49,7 @@ public class Client {
     }
 
     public String getAddress() {
-        return ADDRESS;
+        return "";
     }
 
     public int getPort() {
@@ -132,9 +137,10 @@ public class Client {
     }
 
     private void broadcast(Message.MESSAGE_TYPE type, final Block block) {
-        for (Integer port : ports) {
-            sendMessage(type, ADDRESS, port, block);
+        for(int i = 0;i<ports.size();i++){
+            sendMessage(type, addresses.get(i), ports.get(i), block);
         }
+
 
     }
 

@@ -2,7 +2,6 @@ package blockchain;
 
 
 import java.io.Serializable;
-import java.math.BigInteger;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
@@ -81,8 +80,8 @@ public class Block implements Serializable {
 
         for (int factor = 2; factor <= 10000; factor++) {
             result = result.multiply(BigInteger.valueOf(factor));
-        }*/
-
+        }
+        */
         final byte bytes[] = digest.digest(text.getBytes());
         final StringBuilder hexString = new StringBuilder();
         for (final byte b : bytes) {
