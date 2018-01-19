@@ -1,9 +1,14 @@
 ### Implementation
-Simple blockchain implementation where the nodes are hard coded.
-There are 4 nodes. In order to launch them you have to
-* change the PORT variable in client to 3002,3003 and 3004 for the second, third and forth node
-* make sure that in the constructor the other ports are called. For example, if the current node is 3001, make sure that 3002,3003 and 3004 are in the ports List.
-* each node has to run on a different server port, so change the port before each run in Application.java. Uncomment and comment each line one by one before each run
+There are 4 nodes in the blockchain.
+In order to run them, you need a Linux machine with Docker installed on it.
+Run the script from /images/script.sh
+The script will build the 4 images, create a network, run the containers, add them to the network and then run a couple of tests on them.
+The script should look like: 
+![](https://raw.githubusercontent.com/ovi28/blockchain/master/ss1.png)
+![](https://raw.githubusercontent.com/ovi28/blockchain/master/ss2.png)
+![alt text](https://raw.githubusercontent.com/ovi28/blockchain/master/ss3.png)
+The nodes will be on port 8080, 8081, 8082, 8083.
+The client on node 8081 has a slightly slower mining algorithm.
 
 ### How to use
 After running all the four nodes you have a few options
@@ -20,3 +25,5 @@ Docker containers will be added and a way to run the application in one go will 
 
 ### sources
 https://github.com/Will1229/Blockchain
+https://www.youtube.com/watch?v=Ojs9I-gnkc8&feature=youtu.be
+https://stackoverflow.com/questions/27767264/how-to-dockerize-maven-project-and-how-many-ways-to-accomplish-it
