@@ -19,10 +19,6 @@ After running all the four nodes you have a few options
 
 clientPort should be replaced with the port of the node that needs to be accessed(8080,8081,8082,8083)
 
-### In the future
-Docker containers will be added and a way to run the application in one go will be added.
-
-
 
 ### sources
 https://github.com/Will1229/Blockchain
