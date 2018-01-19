@@ -7,6 +7,7 @@ The script should look like:
 ![](https://raw.githubusercontent.com/ovi28/blockchain/master/ss1.png)
 ![](https://raw.githubusercontent.com/ovi28/blockchain/master/ss2.png)
 ![alt text](https://raw.githubusercontent.com/ovi28/blockchain/master/ss3.png)
+
 The nodes will be on port 8080, 8081, 8082, 8083.
 The client on node 8081 has a slightly slower mining algorithm.
 
